@@ -1,0 +1,119 @@
+/* CarePoint Pro HMS - Custom Styles & Print CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Modern Card Glow & Transitions */
+.card-hover {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08);
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.badge-success { background-color: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+.badge-danger  { background-color: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.badge-warning { background-color: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+.badge-info    { background-color: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd; }
+.badge-primary { background-color: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; }
+.badge-purple  { background-color: #faf5ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+
+/* Status Indicators */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.status-dot-green  { background-color: #10b981; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+.status-dot-amber  { background-color: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2); }
+.status-dot-red    { background-color: #ef4444; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2); }
+.status-dot-blue   { background-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
+
+/* ===================================================
+   PRINT STYLESHEET (Prescriptions, Lab Reports, Invoices)
+   =================================================== */
+@media print {
+    /* Hide Everything Outside Print Target */
+    body * {
+        visibility: hidden;
+    }
+    
+    #printable-area, #printable-area * {
+        visibility: visible;
+    }
+
+    #printable-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    .no-print, .sidebar, header, nav, .btn, button, footer {
+        display: none !important;
+    }
+
+    /* Page Breaks */
+    .page-break {
+        page-break-after: always;
+    }
+
+    /* Clean Borders */
+    .print-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .print-table th, .print-table td {
+        border: 1px solid #e2e8f0;
+        padding: 8px;
+    }
+}
+
+/* Thermal POS 80mm Receipt Print Format */
+@media print {
+    .thermal-receipt {
+        width: 80mm !important;
+        max-width: 80mm !important;
+        padding: 5px !important;
+        font-family: 'Courier New', monospace !important;
+        font-size: 9pt !important;
+    }
+}
