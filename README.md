@@ -76,9 +76,37 @@ To hand this system over to a client:
 
 ---
 
+---
+
+## CarePoint Pro Mobile App (Expo Go SDK 57)
+
+The repository includes a dedicated cross-platform mobile app in the `mobile/` directory built with **React Native** on **Expo Go SDK 57**.
+
+### Features on Mobile:
+- **8-in-1 Role Switcher**: Instant switching between Front Desk, Doctor, Nurse, Pharmacist, Lab Tech, Cashier, Admin, and Patient.
+- **Triage & Live Queue**: Search patient MRNs, view waiting room queues, and call patients.
+- **Ward Bed Matrix**: Interactive color-coded bed status grid (ICU, Emergency, General, VIP).
+- **Embedded Web Bridge (WebView)**: Full live access to the complete backend web platform with custom server IP configurator.
+
+### Running on Mobile with Expo Go:
+1. Navigate to the `mobile` directory:
+   ```bash
+   cd mobile
+   npm install
+   ```
+2. Start the Expo development server:
+   ```bash
+   npx expo start
+   ```
+3. Open the **Expo Go** app on your iOS or Android phone and scan the QR code!
+4. The mobile app connects automatically to your local server on `http://172.20.10.3/hospital%20management%20system` (or custom IP configured in the Settings tab).
+
+---
+
 ## Security & Architectural Standards
 - **PDO Prepared Statements**: 100% SQL injection immunity across all queries.
 - **CSRF Token Protection**: Secure tokens validated on all state-changing POST actions.
 - **XSS Sanitization**: Automated output escaping helper `e()`.
 - **Bcrypt Password Hashing**: Modern, secure password encryption.
 - **Session Guards**: Role-level authorization middleware (`requireAuth()`).
+
