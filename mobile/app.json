@@ -2,6 +2,7 @@
   "expo": {
     "name": "CarePoint Pro HMS",
     "slug": "hospital-management-system",
+    "owner": "heaven_bound",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47c4a3c9-8bd0-42a8-a915-40e4f9efc815"
+      }
     }
   }
 }
