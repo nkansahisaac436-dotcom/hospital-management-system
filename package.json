@@ -6,6 +6,8 @@
   "scripts": {
     "start": "npm start --prefix mobile",
     "mobile": "npm start --prefix mobile",
+    "update": "cd mobile && npx eas-cli update --branch production --message \"CarePoint Pro Release\"",
+    "build:apk": "cd mobile && npx eas-cli build -p android --profile preview",
     "android": "npm run android --prefix mobile",
     "ios": "npm run ios --prefix mobile",
     "web": "npm run web --prefix mobile"
