@@ -14,9 +14,11 @@
       "backgroundColor": "#0d9488"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.heavenbound.hospitalmanagementsystem"
     },
     "android": {
+      "package": "com.heavenbound.hospitalmanagementsystem",
       "adaptiveIcon": {
         "backgroundColor": "#0d9488",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -26,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/47c4a3c9-8bd0-42a8-a915-40e4f9efc815"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     },
     "extra": {
       "eas": {
