@@ -1,0 +1,22 @@
+{
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "CarePoint Pro Hospital Management System with Web & Mobile App (Expo SDK 57)",
+  "main": "mobile/index.js",
+  "scripts": {
+    "start": "npm start --prefix mobile",
+    "mobile": "npm start --prefix mobile",
+    "android": "npm run android --prefix mobile",
+    "ios": "npm run ios --prefix mobile",
+    "web": "npm run web --prefix mobile"
+  },
+  "keywords": [
+    "hospital-management-system",
+    "emr",
+    "healthcare",
+    "expo",
+    "react-native"
+  ],
+  "author": "CarePoint Pro",
+  "license": "MIT"
+}
